@@ -1,0 +1,3 @@
+import Link from 'next/link'
+import { industries } from '@/lib/data'
+export default function Industries(){return <main><section className="pageHero"><div className="container"><span className="breadcrumb">Home / Industries</span><h1 className="h1">Industries We Help</h1><p className="lead">Growth solutions for real estate, education, healthcare, local businesses, e-commerce and personal brands.</p></div></section><section className="section"><div className="container"><div className="cards">{industries.map((s,i)=><Link className="card" href={`/industries/${s.slug}`} key={s.slug}><div className="icon">{i+1}</div><h3>{s.title}</h3><p>Industry-specific marketing, lead generation, ads, website and automation solutions.</p></Link>)}</div></div></section></main>}

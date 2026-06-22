@@ -1,0 +1,3 @@
+import Link from 'next/link'
+import { services } from '@/lib/data'
+export default function Services(){return <main><section className="pageHero"><div className="container"><span className="breadcrumb">Home / Services</span><h1 className="h1">MeriAsk Services</h1><p className="lead">Explore our complete digital marketing, creative, development, SaaS, AI and automation services for business growth.</p></div></section><section className="section"><div className="container"><div className="cards">{services.map((s,i)=><Link className="card" href={`/services/${s.slug}`} key={s.slug}><div className="icon">{i+1}</div><h3>{s.title}</h3><p>{s.items.slice(0,6).join(' • ')}</p></Link>)}</div></div></section></main>}
