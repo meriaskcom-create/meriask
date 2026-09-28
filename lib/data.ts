@@ -16,6 +16,7 @@ export const services = [
 {slug:'saas-app-development',title:'SaaS App Development',items:['SaaS Product Planning','Admin Dashboard','Subscription System','User Management','Payment Integration','API Development','Cloud Deployment','Analytics Dashboard','MVP Development','Product Scaling']},
 {slug:'mobile-app-development',title:'Mobile App Development',items:['Android App Development','Flutter App Development','App UI/UX','Play Store Setup','App Dashboard','Push Notifications','API Integration','App Maintenance','MVP Apps','Business Apps']},
 {slug:'thumbnail-creative-design',title:'Thumbnail / Creative Design',items:['YouTube Thumbnails','Podcast Thumbnails','Reels Covers','Banner Design','Gaming Thumbnails','News Thumbnails','Clickbait Thumbnails','Creative Posters','Promotional Creatives','Thumbnail Optimization']}
+,{slug:'game-development',title:'Game Development',items:['Mobile Game Development','Hyper-Casual Games','Web & HTML5 Games','Game UI/UX Design','Game Prototyping','Ad & In-App Purchase Integration','Leaderboards & Player Accounts','Play Store Publishing']}
 ]
 export const industries = [
 {slug:'real-estate-marketing',title:'Real Estate Marketing'}, {slug:'education-marketing',title:'Coaching & Education Marketing'}, {slug:'healthcare-marketing',title:'Healthcare Marketing'}, {slug:'local-business-marketing',title:'Local Business Marketing'}, {slug:'ecommerce-growth',title:'E-commerce Growth'}, {slug:'personal-brand-growth',title:'Personal Brand Growth'}]

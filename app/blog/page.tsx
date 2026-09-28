@@ -1,2 +1,33 @@
+import Link from 'next/link'
+import type { Metadata } from 'next'
 import CTA from '@/components/CTA'
-export default function Page(){return <main><section className="pageHero"><div className="container"><span className="breadcrumb">Home / blog</span><h1 className="h1"><span className="grad">blog</span></h1><p className="lead">This page is ready for MeriAsk professional website. You can customize content, contact details, packages and business information here.</p></div></section><section className="section"><div className="container split"><div className="panel"><h2>Professional Content Section</h2><p className="sectionLead">Add detailed explanation, trust points, benefits, FAQs and conversion-focused CTA for this page.</p></div><div className="panel"><h2>Lead Focus</h2><form className="form"><input className="input" placeholder="Name"/><input className="input" placeholder="Phone / WhatsApp"/><select className="select"><option>Select Service</option><option>SEO</option><option>Google Ads</option><option>Website Development</option><option>SaaS App Development</option></select><textarea className="textarea" placeholder="Tell us about your requirement"></textarea><button className="btn primary" type="button">Submit Inquiry</button></form></div></div></section><CTA /></main>}
+import Crumbs from '@/components/Crumbs'
+import { posts } from '@/lib/content'
+
+export const metadata: Metadata = {
+  title: 'Blog: SEO, AI Search, Ads & Growth Guides',
+  description: 'Practical guides on SEO, AI search, Google and Meta Ads, local business marketing, websites and SaaS from the MeriAsk team.',
+  alternates: { canonical: '/blog' },
+}
+
+export default function Blog() {
+  return (
+    <main>
+      <section className="pageHero"><div className="container">
+        <Crumbs items={[['Blog', '/blog']]} />
+        <h1 className="h1">MeriAsk <span className="grad">Blog</span></h1>
+        <p className="lead">Practical guides on SEO, AI search, ads, websites and business growth.</p>
+      </div></section>
+      <section className="section"><div className="container"><div className="cards">
+        {posts.map(p => (
+          <Link className="card" href={`/blog/${p.slug}`} key={p.slug}>
+            <span className="chip">{new Date(p.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} · {p.readMins} min read</span>
+            <h3 style={{ marginTop: 14 }}>{p.title}</h3>
+            <p>{p.description}</p>
+          </Link>
+        ))}
+      </div></div></section>
+      <CTA />
+    </main>
+  )
+}

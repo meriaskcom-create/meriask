@@ -73,7 +73,7 @@ export default function Home(){
             <div className="stats">
               <div className="stat"><b>100+</b><span>Project Capabilities</span></div>
               <div className="stat"><b>17+</b><span>Core Service Verticals</span></div>
-              <div className="stat"><b>24/7</b><span>Digital Support Approach</span></div>
+              <div className="stat"><b>9–6</b><span>Team Support Hours</span></div>
             </div>
           </div>
 
@@ -128,7 +128,7 @@ export default function Home(){
           <div className="panel productPanel">
             <span className="eyebrow">Portfolio Power</span>
             <h2 className="sectionTitle">Products & systems we can build.</h2>
-            <p className="sectionLead">In products ko website par dikhane se client ko lagega ki MeriAsk sirf service provider nahi, complete product building company hai.</p>
+            <p className="sectionLead">Alongside client work, MeriAsk designs, builds and runs its own software products, from marketing tools to utility apps and AI.</p>
             <div className="chips">{products.map(p=><span className="chip" key={p}>{p}</span>)}</div>
           </div>
         </div>
