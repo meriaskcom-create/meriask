@@ -1,5 +1,13 @@
 import Link from 'next/link'
 import CTA from '@/components/CTA'
+import JsonLd from '@/components/JsonLd'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Pricing: Digital Marketing Plans from ₹4,000/month',
+  description: 'MeriAsk monthly growth plans start at ₹4,000, ₹8,000 and ₹15,000 per month. Custom quotes for websites, apps, SaaS, automation and AI.',
+  alternates: { canonical: '/pricing' },
+}
 
 const plans = [
   {
@@ -149,6 +157,7 @@ export default function PricingPage(){
         </div>
       </section>
 
+      <JsonLd data={{'@context':'https://schema.org','@type':'ItemList','name':'MeriAsk monthly growth plans','itemListElement':plans.map((pl,i)=>({'@type':'ListItem','position':i+1,'item':{'@type':'Service','name':pl.name,'description':pl.desc,'provider':{'@id':'https://www.meriask.com/#organization'},'offers':{'@type':'Offer','price':pl.price.replace(/,/g,''),'priceCurrency':'INR','priceSpecification':{'@type':'UnitPriceSpecification','price':pl.price.replace(/,/g,''),'priceCurrency':'INR','unitText':'MONTH'}}}}))}} />
       <CTA />
     </main>
   )
